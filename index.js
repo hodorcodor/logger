@@ -6,7 +6,7 @@ let winston = require('winston')
 winston.info('[Logger] Initializing')
 
 let env = process.env.NODE_ENV
-const LOG_LEVEL = env.LOG_LEVEL || 'debug'
+const LOG_LEVEL = process.env.LOG_LEVEL || 'debug'
 
 winston.info('[Logger] LOG_LEVEL = %s', LOG_LEVEL)
 
